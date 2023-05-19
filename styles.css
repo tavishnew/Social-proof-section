@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --VeryDarkMagenta: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+  /*## Neutral*/
+  --DarkGrayishMagenta: hsl(303, 10%, 53%);
+  --LightGrayishMagenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-y: scroll;
+  background-image: url(images/bg-pattern-top-mobile.svg),url(images/bg-pattern-bottom-mobile.svg);
+  background-position: 0 0 -300px 50px;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment:fixed, fixed;
+  background-size:contain, contain;
+  background-color: var(--White);
+  font-size: 15px;
+  font-family: "League Spartan",sans-serif;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+#container{
+  display: grid;
+  width: 80%;
+  max-width: 70rem;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 8.13rem;
+  margin-bottom: 8rem;
+  grid-template-columns: 1fr;
+  row-gap: 2.3rem;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "first"
+  "second"
+  "third";
+
+}
+
+.title{
+  grid-area: first;
+  text-align: center;
+}
+
+.title h1{
+  color: var(--VeryDarkMagenta);
+  font-size: 3rem;
+  margin: 0;
+  line-height: 2.8rem;
+}
+
+.title p{
+  color:var(--DarkGrayishMagenta);
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.rating{
+  grid-area: second;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.review, 
+.guru, 
+.tech{
+  background-color: var(--LightGrayishMagenta);
+  border-radius: 10px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  padding: 6px;
+  height: fit-content;
+  text-align: center;
+}
+
+.review{
+  margin-bottom:1.2em;
+}
+
+.guru{
+  margin-top: 0;
+  margin-bottom:1.2em;
+}
+
+.tech{
+  margin-top: 0;
+}
+
+.rating-content p{
+  color: var(--VeryDarkMagenta);
+  font-weight:700;
+  font-size: 15px;
+  padding: 8px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-left: 2rem;
+}
+
+.stars img{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+
+#customer-ratings{
+  grid-area: third;
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  height: auto;
+}
+
+
+.customer-1,
+.customer-2,
+.customer-3{
+  background-color:var(--VeryDarkMagenta);
+  border-radius: 5px;
+  padding: 1.8rem;
+  height: fit-content;
+  width: fit-content;
+}
+
+.colton,
+.irene,
+.anne{
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+#customer-ratings img{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin-bottom: .7em;
+}
+
+.cus-info{
+  line-height: 20px;
+}
+
+.name{
+  color: var(--White);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pink{
+  color: var(--SoftPink);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.feedback p{
+  color: var(--LightGrayishMagenta);
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 15px;
+}
+
+.attribution {
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  margin:0 0 1.7rem 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-position: left 100px top -100px, right 0 bottom -500px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  body {
+    background-image: url("images/bg-pattern-top-desktop.svg"),
+      url("images/bg-pattern-bottom-desktop.svg");
+    background-position: left -800px top 0, right -250px bottom 0;
+  }
+  #container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "first second"
+      "third third";
+  }
+  .title > * {
+    text-align: left;
+  }
+  h1 {
+    width: 80%;
+  }
+  .title p {
+    width: 85%;
+  }
+  .ratings {
+    align-items: left;
+    padding: 1rem;
+  }
+
+  .rating-content {
+    width: 95%;
+  }
+
+  .guru{
+    margin-left: 3rem;
+  }
+  .tech {
+    margin-left: 6rem;
+  }
+
+  .review,
+  .guru,
+  .tech{
+    text-align: left;
+    width: 100%;
+    flex-direction: row;
+    gap: 1.7rem;
+  }
+  #customer-ratings {
+    flex-direction: row;
+  }
+  .customer-2 {
+    margin-top: 1rem;
+  }
+  .customer-3 {
+    margin-top: 2rem;
+  }
+
+  .customer-1:hover{
+    transition: all .3s;
+    transform: translateY(-10px);
+    transform: scale(1.1);
+
+  }
+  .customer-2:hover{
+    transition:all .3s;
+    transform: translateY(-15px);
+    transform: scale(1.1);
+  }
+  .customer-3:hover{
+    transition: all .3s;
+    transform: translateY(-20px);
+    transform: scale(1.1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
