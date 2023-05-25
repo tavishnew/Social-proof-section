@@ -286,6 +286,9 @@ body::-webkit-scrollbar{
 }
 
 @media only screen and (min-width:400px) {
+  body{
+    overflow: hidden;
+  }
   #container{
     margin-top: 2rem;
   }
