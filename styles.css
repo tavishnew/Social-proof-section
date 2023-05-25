@@ -285,6 +285,92 @@ body::-webkit-scrollbar{
   
 }
 
+@media only screen and (max-width:400px) {
+  #container{
+    margin-top: 2rem;
+  }
+  .upper-part{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-left: 0;
+  }
+
+  .title{
+    text-align: center;
+  }
+
+  .ratings{
+    align-items: center;
+    margin-left: 3rem;
+  }
+
+  .review, 
+  .guru, 
+  .tech{
+    background-color: var(--LightGrayishMagenta);
+    border-radius: 10px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 6px;
+    height: fit-content;
+    text-align: center;
+    width: 90%;
+  }
+  
+  .review{
+    margin-bottom:1.2em;
+  }
+  
+  .guru{
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom:1.2em;
+  }
+  
+  .tech{
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 3rem;
+  }
+
+  .rating-content p{
+    padding: 0;
+    align-items: center;
+    text-align: center;
+    padding-bottom: .5rem;
+  }
+  .stars {
+    display: flex;
+    padding-top: .5rem;
+  }
+  
+  .stars img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  #customer-ratings{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .customer-1{
+    margin-left: 2rem;
+  }
+
+  .customer-2{
+    margin-left: 2rem;
+  }
+
+  .customer-3{
+    margin-left: 2rem;
+  }
+  
+}
+
 
 
 
