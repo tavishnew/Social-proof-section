@@ -77,18 +77,18 @@ body::-webkit-scrollbar{
 }
 
 .review{
-  margin-bottom:1.3em;
+  margin-bottom:1.3rem;
 }
 
 .guru{
   margin-top: 0;
-  margin-bottom:1.3em;
-  margin-left: 2em;
+  margin-bottom:1.3rem;
+  margin-left: 2rem;
 }
 
 .tech{
   margin-top: 0;
-  margin-left: 4em;
+  margin-left: 4rem;
 }
 
 .rating-content p{
@@ -127,7 +127,7 @@ body::-webkit-scrollbar{
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  margin-bottom: .7em;
+  margin-bottom: .7rem;
 }
 
 .cus-info{
@@ -233,13 +233,13 @@ body::-webkit-scrollbar{
   }
   
   .review{
-    margin-bottom:1.2em;
+    margin-bottom:1.2rem;
   }
   
   .guru{
     margin-left: 0;
     margin-top: 0;
-    margin-bottom:1.2em;
+    margin-bottom:1.2rem;
   }
   
   .tech{
@@ -322,13 +322,13 @@ body::-webkit-scrollbar{
   }
   
   .review{
-    margin-bottom:1.2em;
+    margin-bottom:1.2rem;
   }
   
   .guru{
     margin-left: 0;
     margin-top: 0;
-    margin-bottom:1.2em;
+    margin-bottom:1.2rem;
   }
   
   .tech{
