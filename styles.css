@@ -17,8 +17,7 @@
 body{
   overflow: hidden;
   overflow-y: scroll;
-  background-image: url(images/bg-pattern-top-mobile.svg),url(images/bg-pattern-bottom-mobile.svg);
-  background-position: 0 0 -300px 50px;
+  background-image: url("images/bg-pattern-top-desktop.svg"),url("images/bg-pattern-bottom-desktop.svg");
   background-repeat: no-repeat, no-repeat;
   background-attachment:fixed, fixed;
   background-size:contain, contain;
@@ -32,26 +31,18 @@ body::-webkit-scrollbar{
 }
 
 #container{
-  display: grid;
-  width: 80%;
-  max-width: 70rem;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 8.13rem;
-  margin-bottom: 8rem;
-  grid-template-columns: 1fr;
-  row-gap: 2.3rem;
-  grid-template-rows: 1fr;
-  grid-template-areas: 
-  "first"
-  "second"
-  "third";
-
+  margin-top: 4rem;
 }
 
+.upper-part{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-left: 10rem;
+}
+
+
 .title{
-  grid-area: first;
-  text-align: center;
+  text-align: left;
 }
 
 .title h1{
@@ -59,46 +50,45 @@ body::-webkit-scrollbar{
   font-size: 3rem;
   margin: 0;
   line-height: 2.8rem;
+  margin-bottom: 1rem;
 }
 
 .title p{
   color:var(--DarkGrayishMagenta);
   line-height: 1.5rem;
   font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 3rem;
 }
 
-.rating{
-  grid-area: second;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
 
 .review, 
 .guru, 
 .tech{
+  display: flex;
+  align-items: center;
+  text-align: center;
   background-color: var(--LightGrayishMagenta);
   border-radius: 10px;
-  display: flex;
-  flex-direction:column;
-  align-items: center;
   padding: 6px;
   height: fit-content;
-  text-align: center;
+  width: 70%;
+  gap: 20px;
 }
 
 .review{
-  margin-bottom:1.2em;
+  margin-bottom:1.3em;
 }
 
 .guru{
   margin-top: 0;
-  margin-bottom:1.2em;
+  margin-bottom:1.3em;
+  margin-left: 2em;
 }
 
 .tech{
   margin-top: 0;
+  margin-left: 4em;
 }
 
 .rating-content p{
@@ -108,29 +98,17 @@ body::-webkit-scrollbar{
   padding: 8px;
 }
 
-.stars {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  margin-left: 2rem;
-}
-
 .stars img{
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
   height: auto;
   padding: 5px;
+  gap: 8px;
 }
 
 #customer-ratings{
-  grid-area: third;
-  display: flex;
-  flex-direction: column;
-  gap: 1.9rem;
-  height: auto;
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-bottom: 5rem;
 }
-
 
 .customer-1,
 .customer-2,
@@ -139,17 +117,9 @@ body::-webkit-scrollbar{
   border-radius: 5px;
   padding: 1.8rem;
   height: fit-content;
-  width: fit-content;
+  width:85%;
 }
 
-.colton,
-.irene,
-.anne{
-  display: flex;
-  flex-direction: row;
-  gap: 1.6rem;
-  align-items: center;
-}
 
 #customer-ratings img{
   background-repeat: no-repeat;
@@ -162,6 +132,13 @@ body::-webkit-scrollbar{
 
 .cus-info{
   line-height: 20px;
+  display: flex;
+}
+
+.info{
+  flex-direction:column;
+  justify-content: center;
+  padding-left: 20px;
 }
 
 .name{
@@ -194,89 +171,119 @@ body::-webkit-scrollbar{
 }
 
 
-
-@media only screen and (min-width: 600px) {
-  body {
-    background-position: left 100px top -100px, right 0 bottom -500px;
-  }
+.customer-1{
+  margin-left: 1.5rem;
 }
 
-@media only screen and (min-width: 1025px) {
-  body {
-    background-image: url("images/bg-pattern-top-desktop.svg"),
-      url("images/bg-pattern-bottom-desktop.svg");
-    background-position: left -800px top 0, right -250px bottom 0;
-  }
-  #container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas:
-      "first second"
-      "third third";
-  }
-  .title > * {
-    text-align: left;
-  }
-  h1 {
-    width: 80%;
-  }
-  .title p {
-    width: 85%;
-  }
-  .ratings {
-    align-items: left;
-    padding: 1rem;
-  }
+.customer-2 {
+  margin-top: 1rem;
+}
+.customer-3 {
+  margin-top: 2rem;
+}
 
-  .rating-content {
-    width: 95%;
-  }
+.customer-1:hover{
+  transition: all .3s;
+  transform: translateY(-10px);
+  transform: scale(1.1);
 
-  .guru{
-    margin-left: 3rem;
-  }
-  .tech {
-    margin-left: 6rem;
-  }
+}
+.customer-2:hover{
+  transition:all .3s;
+  transform: translateY(-15px);
+  transform: scale(1.1);
+}
+.customer-3:hover{
+  transition: all .3s;
+  transform: translateY(-20px);
+  transform: scale(1.1);
+}
 
-  .review,
-  .guru,
-  .tech{
-    text-align: left;
-    width: 100%;
-    flex-direction: row;
-    gap: 1.7rem;
-  }
-  #customer-ratings {
-    flex-direction: row;
-  }
-  .customer-2 {
-    margin-top: 1rem;
-  }
-  .customer-3 {
+@media only screen and (max-width:760px) {
+  #container{
     margin-top: 2rem;
   }
+  .upper-part{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-left: 0;
+  }
 
-  .customer-1:hover{
-    transition: all .3s;
-    transform: translateY(-10px);
-    transform: scale(1.1);
+  .title{
+    text-align: center;
+  }
 
+  .ratings{
+    align-items: center;
+    margin-left: 3rem;
   }
-  .customer-2:hover{
-    transition:all .3s;
-    transform: translateY(-15px);
-    transform: scale(1.1);
+
+  .review, 
+  .guru, 
+  .tech{
+    background-color: var(--LightGrayishMagenta);
+    border-radius: 10px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 6px;
+    height: fit-content;
+    text-align: center;
+    width: 90%;
   }
-  .customer-3:hover{
-    transition: all .3s;
-    transform: translateY(-20px);
-    transform: scale(1.1);
+  
+  .review{
+    margin-bottom:1.2em;
   }
+  
+  .guru{
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom:1.2em;
+  }
+  
+  .tech{
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 3rem;
+  }
+
+  .rating-content p{
+    padding: 0;
+    align-items: center;
+    text-align: center;
+    padding-bottom: .5rem;
+  }
+  .stars {
+    display: flex;
+    padding-top: .5rem;
+  }
+  
+  .stars img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  #customer-ratings{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .customer-1{
+    margin-left: 2rem;
+  }
+
+  .customer-2{
+    margin-left: 2rem;
+  }
+
+  .customer-3{
+    margin-left: 2rem;
+  }
+  
 }
-
-
-
 
 
 
